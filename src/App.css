@@ -1,0 +1,71 @@
+
+.App-header {
+  background-color: rgb(74, 37, 175);
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  width:100%;
+  color: rgb(254, 200, 16);
+}
+
+.App-list {
+  background-color: #fff;
+  flex-direction: row;
+  margin-top: 20px;
+  font-size: 20px;
+  width:50%;
+  color: black;
+  /*background-color: rgb(224, 31, 63);*/
+
+}
+.App-list-element{
+  justify-content: space-around;
+  flex-direction: row;
+  display:flex;
+  width:20%;
+  font-size: 15px;
+
+}
+
+
+.TodoListItem{
+  flex-direction: row;
+  display:flex;
+  justify-content: space-between;
+  padding:15px;
+  border-radius: 5px;
+  background-color: #efefef;
+  margin-bottom: 10px;
+}
+
+.App-field {
+  width:100%;
+  flexDirection: column;
+  text-align: center;
+  align-self: center;
+  margin-top: 10px;
+
+}
+
+.Input {
+  padding:15px;
+  border-radius: 5px;
+  border:0px;
+  background-color: #efefef;
+  margin-bottom: 10px;
+  width:50%;
+  font-family: "Comic Sans MS";
+}
+
+.completed {
+  background-color: rgb(107, 224, 111);
+}
+
+.completed-text{
+  text-decoration: line-through;
+}
+
+.App{
+  overflow: hidden;
+}
