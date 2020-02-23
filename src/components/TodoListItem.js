@@ -16,7 +16,7 @@ class TodoListItem extends React.Component {
 
         return (
             <div className={`TodoListItem ${this.props.todo.completed ? 'completed' : ''}`}>
-                <div style={{width: '80%'}}>
+                <div className="ListItemText">
                     <span className={this.props.todo.completed ? 'completed-text' : ''}>{this.props.todo.text}</span>
                 </div>
                 <div className="App-list-element">
