@@ -11,11 +11,20 @@ const store = createStore(rootReducer);
 
 class App extends React.Component {
     addTodoItem(text) {
-        store.dispatch(addTodo(text));
+        if(text.length>0){
+            store.dispatch(addTodo(text));
+            this.setState({inputValue:""});
+        }
+
+    }
+    constructor(props) {
+        super(props);
+        this.state = {inputValue:""};
     }
 
+
     render() {
-        let input;
+
 
         return (
             <Provider store={store}>
@@ -26,8 +35,13 @@ class App extends React.Component {
                 </div>
 
                 <div className="App-field">
-                    <input onKeyPress={(e) => { if (e.key === 'Enter') this.addTodoItem(input.value);}} ref={node => input = node}
-                           className="Input" placeholder="Write Your Task"/>
+                    <input onChange={(event)=>{
+
+                        this.setState({inputValue:event.target.value})}
+                    }
+                           onKeyPress={(e) => { if (e.key === 'Enter') {this.addTodoItem(this.state.inputValue);}}}
+                           className="Input" placeholder="Write Your Task"
+                           value={this.state.inputValue}/>
                 </div>
             </div>
             </Provider>
